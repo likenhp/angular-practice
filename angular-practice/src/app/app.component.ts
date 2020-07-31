@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { User } from './address-card/user.model';
+// import { User } from './address-card/user.model';
+import { TestService } from './test.service'
 
 @Component({
   selector: 'app-root',
@@ -8,19 +9,26 @@ import { User } from './address-card/user.model';
 })
 export class AppComponent {
   // title = 'angular-practice-application';
-  user: User;
-  inputText: string = 'Initial value';
+  // user: User;
+  // inputText: string = 'Initial value';
 
-  constructor () {
+  // I need TestService
 
-    this.user = new User();
-    this.user.name = 'Newman Son';
-    this.user.designation = 'Software Engineer';
-    this.user.address = '120 Main Street City State';
-    this.user.phone = [
-      '123-456-7890',
-      '456-123-0987',
-    ];
 
+  // the arg in constructor will inject the service into the constructor, can then store it in a variable
+  // 1) injects the service
+  // 2) lets angular know what other services you need
+  // private creates a member variable so it can be used as this.variableName
+  constructor (private svc: TestService) {
+    // this.user = new User();
+    // this.user.name = 'Newman Son';
+    // this.user.designation = 'Software Engineer';
+    // this.user.address = '120 Main Street City State';
+    // this.user.phone = [
+    //   '123-456-7890',
+    //   '456-123-0987',
+    // ];
+
+    this.svc.printToConsole('service should work');
   }
 }

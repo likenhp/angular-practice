@@ -7,8 +7,11 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { DateComponent } from './date/date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { ViewModule } from './view/view.module'
+import { TestService} from './test.service'
+import { from } from 'rxjs';
 
 @NgModule({
+  // declarations contain all the components
   declarations: [
     AppComponent,
     HelloWorldComponent,
@@ -24,7 +27,13 @@ import { ViewModule } from './view/view.module'
     FormsModule,
     ViewModule // import the module
   ],
-  providers: [],
+  // everything else exists in the providers
+  // anyone can access this part of the providers
+  providers: [
+    TestService
+  ],
   bootstrap: [AppComponent]
 })
+// NgModule means its an angular module
+
 export class AppModule { }
