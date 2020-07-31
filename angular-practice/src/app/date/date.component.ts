@@ -8,15 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class DateComponent implements OnInit {
 
   dateMessage: string;
+  someNumber: number = 10;
 
   constructor() {
     setInterval(() => {
-      let currentDate = new Date()
+      let currentDate = new Date();
       this.dateMessage = currentDate.toDateString() + ' ' + currentDate.toLocaleTimeString();
     } , 1000)
   }
 
   ngOnInit(): void {
+  }
+
+  addTwoNumbers(a: number, b: number) {
+    return a + b
   }
 
 }
