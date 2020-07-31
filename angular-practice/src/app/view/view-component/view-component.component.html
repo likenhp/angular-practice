@@ -1,0 +1,13 @@
+User name:<input type="text" [(ngModel)]="httpName">
+<button (click)="getUserData()">Search</button>
+
+<div *ngIf="response">
+    <p *ngFor="let item of response | keyvalue">{{item.key}}: {{item.value}}</p>
+    <!-- the ? before the .login is an if check to see if response exists, if it doesn't don't display-->
+    <!-- <p>{{response?.login}}</p> 
+    <p>{{response.public_repos}}</p>
+    <p>{{response.public_gists}}</p>
+    <p>{{response.followers}}</p> -->
+</div>
+
+
