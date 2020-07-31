@@ -9,6 +9,7 @@ import { User } from './address-card/user.model';
 export class AppComponent {
   // title = 'angular-practice-application';
   user: User;
+  inputText: string = 'Initial value';
 
   constructor () {
 
