@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { DateComponent } from './date/date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
+import { ViewModule } from './view/view.module'
 
 @NgModule({
   declarations: [
@@ -14,10 +15,14 @@ import { AddressCardComponent } from './address-card/address-card.component';
     DateComponent,
     AddressCardComponent
   ],
+  // imports are dependencies on other modules
+  // able to import other modules
+  // angular importing specific syntax
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ViewModule // import the module
   ],
   providers: [],
   bootstrap: [AppComponent]
