@@ -8,7 +8,7 @@ import { DateComponent } from './date/date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { ViewModule } from './view/view.module'
 import { TestService} from './test.service'
-import { from } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   // declarations contain all the components
@@ -25,7 +25,8 @@ import { from } from 'rxjs';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ViewModule // import the module
+    ViewModule, // import the module
+    HttpClientModule
   ],
   // everything else exists in the providers
   // anyone can access this part of the providers
