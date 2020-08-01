@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routing-practice';
+  // homeRoute: string = 'home';
+  // settingsRoute: string = 'settings';
+
+  routes = [
+    {linkName: 'Home', url: 'home'},
+    {linkName: 'Settings', url: 'settings'},
+  ]
+
 }
