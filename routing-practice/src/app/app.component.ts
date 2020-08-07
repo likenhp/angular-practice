@@ -15,4 +15,11 @@ export class AppComponent {
     {linkName: 'Settings', url: 'settings'},
   ]
 
+  constructor() {
+    let returnArg: any = function foo<T> (arg: T): T {
+      return arg
+    }
+    console.log('this is?', returnArg(1))
+  }
+
 }
